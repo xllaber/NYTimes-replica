@@ -1,0 +1,9 @@
+.l-flex{
+  display: flex;
+  &--flex-direction-row{
+    flex-direction:row;
+  }
+  &--flex-direction-column{
+    flex-direction:column;
+  }
+}

@@ -1,0 +1,20 @@
+.c-news-card {
+  --c-news-card-margin-x: var(--margin-6);
+
+  margin: var(--c-news-card-margin-x);
+  &__title {
+    --c-news-title-font-size: var(--font-size-10);
+
+    font-size: var(--c-news-title-font-size);
+    font-weight: bold;
+  }
+  &__summary {
+    --c-news-summary-font-size: var(--font-size-8);
+    font-weight: lighter;
+    font-size: var(--c-news-summary-font-size);
+    color: #5A5A5A;
+  }
+  &__image {
+    width: 100%;
+  }
+}

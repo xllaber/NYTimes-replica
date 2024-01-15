@@ -1,0 +1,31 @@
+@each $breakpoint, $size in $breakpoints {
+  $separator: if($breakpoint == "", "", "\\:");
+  @media (min-width: #{$size}px) {
+    .#{$breakpoint}#{$separator}l-columns{
+      display: grid;
+      padding:  20px;
+      max-width: 80%;
+      &--1{
+        grid-template-columns: repeat(1, 1fr);;
+      }
+      &--2{
+        grid-template-columns: repeat(2,1fr);
+      }
+      &--3{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      &--4{
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 50px;
+        margin-left: 250px;
+        margin-right: 250px;
+      }
+      &--padding-1{
+        padding: 30px;
+      }
+      &--padding-2{
+        padding:40px;
+      }
+    }
+  }
+}

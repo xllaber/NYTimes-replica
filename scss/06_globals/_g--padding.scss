@@ -1,0 +1,49 @@
+:root {
+  @for $i from 1 through length($paddings) {
+    --padding-#{$i}: #{nth($paddings, $i)};
+  }
+}
+
+@each $breakpoint, $size in $breakpoints {
+  $separator: if($breakpoint == "", "", "\\:");
+  @media (min-width: #{$size}px) {
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}g--padding-#{$i} {
+        padding: nth($paddings, $i);
+      }
+    }
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}\g--padding-y-#{$i} {
+        padding-top: nth($paddings, $i);
+        padding-bottom: nth($paddings, $i);
+      }
+    }
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}\g--padding-x-#{$i} {
+        padding-left: nth($paddings, $i);
+        padding-right: nth($paddings, $i);
+      }
+    }
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}\g--padding-top-#{$i} {
+        padding-top: nth($paddings, $i);
+      }
+    }
+
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}\g--padding-bottom-#{$i} {
+        padding-bottom: nth($paddings, $i);
+      }
+    }
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}\g--padding-left-#{$i} {
+        padding-left: nth($paddings, $i);
+      }
+    }
+    @for $i from 1 through length($paddings) {
+      .#{$breakpoint}#{$separator}\g--padding-right-#{$i} {
+        padding-right: nth($paddings, $i);
+      }
+    }
+  }
+}
