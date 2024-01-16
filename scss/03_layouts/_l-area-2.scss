@@ -1,0 +1,29 @@
+@each $breakpoint, $size in $breakpoints {
+  $separator: if($breakpoint == "", "", "\\:");
+  @media (min-width: #{$size}px) {
+    .#{$breakpoint}#{$separator}l-area-2{
+      display: grid;
+      grid-template-areas: "col1 col2";
+      &--12-vertical {
+        grid-template-areas:
+          "col1"
+          "col2";
+      }
+      &--21-vertical {
+        grid-template-areas:
+          "col2"
+          "col1";
+      }
+      &--21-horizontal {
+        grid-template-areas:
+          "col2 col1";
+      }
+      &__co1{
+        grid-area: col1;
+      }
+      &__col2{
+        grid-area: col2;
+      }
+    }
+  }
+}

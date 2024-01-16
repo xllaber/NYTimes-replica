@@ -1,7 +1,7 @@
 @each $breakpoint, $size in $breakpoints {
   $separator: if($breakpoint == "", "", "\\:");
   @media (min-width: #{$size}px) {
-    .#{$breakpoint}#{$separator}l-grid-area{
+    .#{$breakpoint}#{$separator}l-area-3{
       display: grid;
       grid-template-areas: "col1 col2 col3";
       &--123-vertical {

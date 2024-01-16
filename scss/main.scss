@@ -8,11 +8,14 @@
 @import
 "03_layouts/l-columns",
 "03_layouts/l-flex",
-"03_layouts/l-grid-area";
+"03_layouts/l-area-2",
+"03_layouts/l-area-3",
+"03_layouts/l-area-4";
 
 @import
 "04_components/c-title",
-"04_components/c-news-card";
+"04_components/c-news-card",
+"04_components/c-area-image";
 
 @import
 "06_globals/g--margins",
